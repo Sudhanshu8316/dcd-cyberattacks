@@ -1,0 +1,39 @@
+AUTOMATED CYBERSECURITY DEFENSE SYSTEM - EMERGENCY REPORT
+Generated: 2026-03-22 22:06:44
+============================================================
+
++--------------------------------+--------+--------+---------+
+| File                           | Risk   |   CVSS | MITRE   |
++================================+========+========+=========+
+| sample_data/system/rootkit.bin | DANGER |    9.8 | T1486   |
++--------------------------------+--------+--------+---------+
+| sample_data/system/trojan.exe  | DANGER |    9.8 | T1486   |
++--------------------------------+--------+--------+---------+
+| sample_data/system/install.sh  | HIGH   |    8.1 | T1059   |
++--------------------------------+--------+--------+---------+
+| sample_data/hidden/.config     | MEDIUM |    6.5 | T1070   |
++--------------------------------+--------+--------+---------+
+
+MITRE ATT&CK MITIGATIONS:
+
+sample_data/system/rootkit.bin:
+  • 🔒 Isolate system NOW
+  • 🛡️ Full antivirus scan
+  • 💾 Restore backups
+  • 📞 Report incident
+
+sample_data/system/trojan.exe:
+  • 🔒 Isolate system NOW
+  • 🛡️ Full antivirus scan
+  • 💾 Restore backups
+  • 📞 Report incident
+
+sample_data/system/install.sh:
+  • 🔍 Verify script source
+  • 🚫 Block execution
+  • 📊 Monitor processes
+
+sample_data/hidden/.config:
+  • 👁️ Show hidden files
+  • 🧹 Clean temp folders
+  • 🔐 Restrict permissions

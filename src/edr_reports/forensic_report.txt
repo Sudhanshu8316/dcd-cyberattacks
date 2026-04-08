@@ -1,0 +1,246 @@
+
+
+================================================================================
+🛡️  MITRE ATT&CK ENHANCED FORENSIC REPORT  v3.0
+  Scan Time  : 2026-04-08 15:27:56
+  Platform   : Linux 6.18.5+kali-amd64
+  Report Dir : edr_reports/
+  Permissions: chmod 640 (owner rw, group:sudo r)
+================================================================================
+
+[ SECTION 1 ] FILE SCAN — EXECUTIVE SUMMARY
+================================================================================
+
+╒════╤══════════════════════════════════╤════════╤════════╤═════════╕
+│    │ File                             │ Risk   │   CVSS │ MITRE   │
+╞════╪══════════════════════════════════╪════════╪════════╪═════════╡
+│ 🚨 │ sample_data/system/rootkit.bin   │ DANGER │    9.8 │ T1486   │
+├────┼──────────────────────────────────┼────────┼────────┼─────────┤
+│ 🚨 │ sample_data/system/trojan.exe    │ DANGER │    9.8 │ T1486   │
+├────┼──────────────────────────────────┼────────┼────────┼─────────┤
+│ ⚠️ │ sample_data/system/install.sh    │ HIGH   │    8.1 │ T1059   │
+├────┼──────────────────────────────────┼────────┼────────┼─────────┤
+│ 🟡 │ sample_data/hidden/.config       │ MEDIUM │    6.5 │ T1070   │
+├────┼──────────────────────────────────┼────────┼────────┼─────────┤
+│ ✅ │ sample_data/documents/notes.docx │ SAFE   │    0   │ N/A     │
+├────┼──────────────────────────────────┼────────┼────────┼─────────┤
+│ ✅ │ sample_data/documents/report.txt │ SAFE   │    0   │ N/A     │
+├────┼──────────────────────────────────┼────────┼────────┼─────────┤
+│ ✅ │ sample_data/media/big_backup.zip │ SAFE   │    0   │ N/A     │
+╘════╧══════════════════════════════════╧════════╧════════╧═════════╛
+
+[ SECTION 2 ] DETAILED FORENSIC FILE ANALYSIS
+================================================================================
+
+🔍 CASE 1: sample_data/system/rootkit.bin
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Risk Level      : DANGER (10/10)
+  CVSS Score      : 9.8/10
+  MITRE Technique : T1486 — Data Encrypted for Impact
+  Tactic          : Impact
+  File Size       : 15 bytes
+  Last Modified   : 2026-02-18 14:58:08
+  SHA-256         : d3378e71576ceb23f7779a571f32b4658148da9328f6c6d8da84a709e0c86a87
+
+  📋 THREAT DESCRIPTION
+  Adversaries may encrypt data on target systems or on large numbers of systems in a network to interrupt availability to system and network resources. They can attempt to render stored data inaccessible by encrypting files or data on local and remote drives and withholding access to a decryption key. This may be done in order to extract monetary compensation from a victim in exchange for decryption
+
+  🛡️  MITRE-RECOMMENDED MITIGATIONS
+  ──────────────────────────────────────────────────
+   1. Deploy EDR/XDR solutions
+   2. Enable application allowlisting
+   3. Maintain offline encrypted backups
+   4. Configure ransomware protection
+   5. Monitor for mass file encryption events
+   6. Implement network segmentation
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 CASE 2: sample_data/system/trojan.exe
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Risk Level      : DANGER (10/10)
+  CVSS Score      : 9.8/10
+  MITRE Technique : T1486 — Data Encrypted for Impact
+  Tactic          : Impact
+  File Size       : 25 bytes
+  Last Modified   : 2026-02-18 14:58:08
+  SHA-256         : 2698375e590836f24c514f4f8652b3464dbda3e3d33291d123b96b21b08743d7
+
+  📋 THREAT DESCRIPTION
+  Adversaries may encrypt data on target systems or on large numbers of systems in a network to interrupt availability to system and network resources. They can attempt to render stored data inaccessible by encrypting files or data on local and remote drives and withholding access to a decryption key. This may be done in order to extract monetary compensation from a victim in exchange for decryption
+
+  🛡️  MITRE-RECOMMENDED MITIGATIONS
+  ──────────────────────────────────────────────────
+   1. Deploy EDR/XDR solutions
+   2. Enable application allowlisting
+   3. Maintain offline encrypted backups
+   4. Configure ransomware protection
+   5. Monitor for mass file encryption events
+   6. Implement network segmentation
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 CASE 3: sample_data/system/install.sh
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Risk Level      : HIGH (8/10)
+  CVSS Score      : 8.1/10
+  MITRE Technique : T1059 — Command and Scripting Interpreter
+  Tactic          : Execution
+  File Size       : 20 bytes
+  Last Modified   : 2026-02-18 14:58:08
+  SHA-256         : e946dff98b250251b6a097445a8c852917ba0ea7e869a8ad8fdadfab6e5d4bc7
+
+  📋 THREAT DESCRIPTION
+  Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries. These interfaces and languages provide ways of interacting with computer systems and are a common feature across many different platforms. Most systems come with some built-in command-line interface and scripting capabilities, for example, macOS and Linux distributions include some flavor of [Unix Shel
+
+  🛡️  MITRE-RECOMMENDED MITIGATIONS
+  ──────────────────────────────────────────────────
+   1. Constrain PowerShell to Constrained Language Mode
+   2. Enable Script Block Logging
+   3. Implement Least Privilege
+   4. Block Office macros
+   5. Audit command line arguments
+   6. Enable ETW logging
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 CASE 4: sample_data/hidden/.config
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Risk Level      : MEDIUM (5/10)
+  CVSS Score      : 6.5/10
+  MITRE Technique : T1070 — Indicator Removal
+  Tactic          : Defense Evasion
+  File Size       : 14 bytes
+  Last Modified   : 2026-02-18 14:58:08
+  SHA-256         : bf6602893409eb3dfa0dedcca02783a9326934647f99d8e2fb8552634d59cbac
+
+  📋 THREAT DESCRIPTION
+  Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses. Various artifacts may be created by an adversary or something that can be attributed to an adversary’s actions. Typically these artifacts are used as defensive indicators related to monitored events, such as strings from downloaded files, logs that are generated from user ac
+
+  🛡️  MITRE-RECOMMENDED MITIGATIONS
+  ──────────────────────────────────────────────────
+   1. Enable file integrity monitoring
+   2. Configure log retention
+   3. Deploy Sysmon
+   4. Implement tamper protection
+   5. Monitor Event ID 1102 (log clearing)
+   6. Use immutable cloud logging
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 CASE 5: sample_data/documents/notes.docx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Risk Level      : SAFE (1/10)
+  CVSS Score      : 0.0/10
+  MITRE Technique : N/A — N/A Generic
+  Tactic          : Reconnaissance
+  File Size       : 11 bytes
+  Last Modified   : 2026-02-18 14:58:08
+  SHA-256         : 8e1b6a2581b9cd5e90b7e775955d1cc6133683b25010f6015718a9dc5d44a2a8
+
+  📋 THREAT DESCRIPTION
+  Characteristics of N/A
+
+  🛡️  MITRE-RECOMMENDED MITIGATIONS
+  ──────────────────────────────────────────────────
+   1. Keep systems patched
+   2. Deploy EDR/XDR
+   3. Apply Zero Trust principles
+   4. Conduct security training
+   5. Perform red team exercises
+   6. Maintain IR playbooks
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 CASE 6: sample_data/documents/report.txt
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Risk Level      : SAFE (1/10)
+  CVSS Score      : 0.0/10
+  MITRE Technique : N/A — N/A Generic
+  Tactic          : Reconnaissance
+  File Size       : 20 bytes
+  Last Modified   : 2026-02-18 14:58:08
+  SHA-256         : 7e37a6158da646cd7146324aec3fefae75dbea03137764f2d310321ed3641456
+
+  📋 THREAT DESCRIPTION
+  Characteristics of N/A
+
+  🛡️  MITRE-RECOMMENDED MITIGATIONS
+  ──────────────────────────────────────────────────
+   1. Keep systems patched
+   2. Deploy EDR/XDR
+   3. Apply Zero Trust principles
+   4. Conduct security training
+   5. Perform red team exercises
+   6. Maintain IR playbooks
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 CASE 7: sample_data/media/big_backup.zip
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Risk Level      : SAFE (1/10)
+  CVSS Score      : 0.0/10
+  MITRE Technique : N/A — N/A Generic
+  Tactic          : Reconnaissance
+  File Size       : 6,291,456 bytes
+  Last Modified   : 2026-02-18 14:58:08
+  SHA-256         : b69dae56a14d1a8314ed40664c4033ea0a550eea2673e04df42a66ac6b9faf2c
+
+  📋 THREAT DESCRIPTION
+  Characteristics of N/A
+
+  🛡️  MITRE-RECOMMENDED MITIGATIONS
+  ──────────────────────────────────────────────────
+   1. Keep systems patched
+   2. Deploy EDR/XDR
+   3. Apply Zero Trust principles
+   4. Conduct security training
+   5. Perform red team exercises
+   6. Maintain IR playbooks
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ SECTION 3 ] NORMALISED EVENT LOG  (CEF format)
+================================================================================
+
+  Total normalised events : 338
+  Non-LOW events shown    : 6
+
+  [2026-04-08T15:27:56] [HIGH    ] [process_monitor     ] MITRE:N/A      TACTIC:N/A
+  → pid=5 name=kworker/r-sync_wq user=root cmd=
+
+  [2026-04-08T15:27:56] [HIGH    ] [process_monitor     ] MITRE:N/A      TACTIC:N/A
+  → pid=493 name=systemd-timesyncd user=systemd-timesync cmd=/usr/lib/systemd/systemd-timesyncd
+
+  [2026-04-08T15:27:56] [HIGH    ] [process_monitor     ] MITRE:N/A      TACTIC:N/A
+  → pid=1536 name=at-spi-bus-launcher user=sudhya cmd=/usr/libexec/at-spi-bus-launcher
+
+  [2026-04-08T15:27:56] [CRITICAL] [process_monitor     ] MITRE:N/A      TACTIC:N/A
+  → pid=131337 name=kworker/2:1-events user=root cmd=
+
+  [2026-04-08T15:27:56] [MEDIUM  ] [process_monitor     ] MITRE:T1059    TACTIC:Execution
+  → pid=134469 name=brave-browser-s user=sudhya cmd=/bin/bash /usr/bin/brave-browser-stable
+
+  [2026-04-08T15:27:56] [MEDIUM  ] [process_monitor     ] MITRE:T1059    TACTIC:Execution
+  → pid=143517 name=bash user=sudhya cmd=/bin/bash
+
+[ SECTION 4 ] CORRELATION ENGINE — ATTACK CHAIN ANALYSIS
+================================================================================
+
+  ⚡ [CRITICAL] COR-004 — C2 Beacon Detected
+     MITRE : T1071 | Tactic: Command & Control
+     Detail: C2 ports observed: ['unknown:31337', 'unknown:1337']
+     Desc  : Outbound connection to known C2 port (4444/1337/31337)
+
+[ SECTION 5 ] ALERT ENGINE SUMMARY
+================================================================================
+
+  CRITICAL : 0
+  HIGH     : 0
+  MEDIUM   : 0
+  LOW      : 0
+
+
+================================================================================
+END OF REPORT
+================================================================================
