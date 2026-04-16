@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+forensic_report.txt
+report_lock.json

@@ -1,0 +1,19 @@
+venv/
+__pycache__/
+*.pyc
+
+# Reports & logs
+edr_reports/
+logs/
+*.log
+
+# Dangerous / unnecessary files
+*.exe
+*.bin
+*.zip
+
+# Lock file
+report_lock.json
+
+# OS files
+.DS_Store

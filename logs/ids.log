@@ -1,3 +1,0 @@
-[ALERT] Possible intrusion detected: network scan activity from 192.168.1.20
-[ALERT] Multiple connection attempts detected – possible brute force attack
-[INFO] Scan signature matched: nmap SYN scan

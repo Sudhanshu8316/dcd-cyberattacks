@@ -1,14 +1,1 @@
-[
-  {
-    "alert_id": "ALT-33404",
-    "timestamp": "2026-04-08T15:27:56",
-    "rule_id": "COR-004",
-    "rule_name": "C2 Beacon Detected",
-    "description": "Outbound connection to known C2 port (4444/1337/31337)",
-    "severity": "CRITICAL",
-    "mitre_id": "T1071",
-    "tactic": "Command & Control",
-    "detail": "C2 ports observed: ['unknown:31337', 'unknown:1337']",
-    "event_count": 338
-  }
-]
+[]

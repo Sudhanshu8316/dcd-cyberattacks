@@ -1,3 +1,0 @@
-T1110 - Brute Force (Initial Access)
-T1595 - Active Scanning (Reconnaissance)
-T1046 - Network Service Scanning (Discovery)

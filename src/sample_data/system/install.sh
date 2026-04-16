@@ -1,1 +1,2 @@
-echo Running script
+#!/bin/bash
+echo 'Installing backdoor'

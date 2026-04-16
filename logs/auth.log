@@ -1,4 +1,0 @@
-Jan 20 10:12:45 kali sshd[1342]: Failed password for invalid user admin from 192.168.1.10 port 44512 ssh2
-Jan 20 10:12:48 kali sshd[1342]: Failed password for invalid user root from 192.168.1.10 port 44513 ssh2
-Jan 20 10:12:52 kali sshd[1342]: Failed password for invalid user test from 192.168.1.10 port 44514 ssh2
-Jan 20 10:13:01 kali sshd[1342]: authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.10
